@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Loops</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            for(var i=0; i< 10 ; i+1){
+                console.log('index', i)
+            }
+            for(var i=-10; i< 10 ; i+1){
+                console.log('index', i)
+            }
+            for(var i=-10; i< 10 ; i+.1){
+                console.log('index', i)
+            }
+            for(var i=0; i< 10 ; i++){
+                console.log('index', i)
+            }
+            const names =['ehsan', 'jack', 'Robert','Mike']
+            names.length
+            for(var i=0; i < names.length; i++){
+                console.log('name is:', names[i])
+            }
+            names.forEach(function(names){
+                console.log('name is:', names)
+            })
+            names.forEach(function(name , index){
+                console.log('name is:', name , index)
+            })
+            names.forEach(function(param1 , indexVariable){
+                console.log('name is:', param1 , indexVariable)
+            })
+            names.map(function(name , index){
+                return name + ' Gazer'
+            })
+            var namesAndSurname = names.map(function(name , index){
+                return name + ' Gazer'
+            })
+            // for in
+            for(name in names){
+                console.log('name', name)
+            }
+            for(index in names){
+                console.log('name', names[index])
+            }
+            var count =0
+            while(count < 10){
+                console.log('count', count)
+            }
+            var count =0
+            while(count < 10){
+                console.log('count', count)
+                count++
+            }
+            const names2 =['ehsan', 'jack', 'Robert','Mike']
+            var count =0
+            while(count < names2.length){
+                console.log('name', names2[count])
+                count++
+            }
+        </script>
+    </body>
+</html>

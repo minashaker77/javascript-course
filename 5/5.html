@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Functions</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            var print = function(){
+                console.log('printed');
+            }
+            // printed
+            var print = function(){
+                console.log(2+2);
+            }
+            // 4
+            var print = function(a,b){
+                console.log(a+b);
+            }
+            // sum() ==> NaN
+            // sum(2+3) ==> 5
+            var print = function(a,b){
+                return a+b
+            }
+            // sum(2+3) ==> 5
+            var c = sum(2,3)
+            // c ==> 5
+            var getName = function(teacher){
+                return teacher.name
+            }
+            getName({name:'ehsan' , surname: 'Gazar'})
+            // 'ehsan'
+            var getName = function(){
+                console.log(aarguments)
+            }
+            // getName({name:'ehsan' , surname: 'Gazar'}) 
+            // ==> 0:
+            //         name: ' ehsan' 
+            //         surname: ' gazar' 
+            var pay = function(amount){
+                // motagheyre mahali
+                var thisAmount = amount * 10
+                return amount * 10
+            }
+            // pay(10) ==> 100
+            var app = {
+                print: function(){
+                    console.log(printingVvariable)
+                }
+            }
+            // app.print('Ehsan Gazar') ==> Ehsan Gazar
+            // define function in object (functional programming)
+            var getName = function(teacher){
+                return teacher.name
+            }
+            var app = {
+                print: function(){
+                    console.log(printingVvariable)
+                },
+                getName: getName
+            }
+            // app.getName({name:'ehsan'}) ==> 'ehsan'
+        </script>
+    </body>
+</html>

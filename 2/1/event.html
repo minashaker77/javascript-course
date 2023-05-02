@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Events</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+            transition-duration: 500ms;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        // var showAlert = function () {
+        //     alert('clicked')
+        //     console.log('showAlert')
+        // }
+        // var onchangeInput = function (event) {
+        //     console.log('onchangeInput', event)
+        // }
+        var onchangeInput = function (event) {
+            console.log('onchangeInput', event.target.value)
+        }
+        // var showOnMouseOverAlert = function () {
+        //     alert('clicked')
+        //     console.log('Clicked and this is the log')
+        // }
+        // var showOnMouseOverAlert = function () {
+        //     console.log('showOnMouseOverAlert')
+        // }
+        // var showOnMouseOverForDiv = function () {
+        //     console.log('showOnMouseOverForDiv')
+        // }
+        var username;
+        var password;
+        var onchangeInputUsername = function (event) {
+            username = event.target.value
+        }
+        var onchangeInputPassword = function (event) {
+            password = event.target.value
+        }
+        // var submitForm = function (event) {
+        //     event.preventDefault()
+        //     console.log('data', username , password)
+        // }
+        var submitForm = function (event) {
+            event.preventDefault()
+            var form = new FormData(event.target)
+            console.log('username',form.get('username'))
+            console.log('password',form.get('password'))
+        }
+    </script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Javascript Course</h1>
+    <p>
+        Officia nulla ad proident aute aliquip.
+    </p>
+    <form onsubmit="submitForm(event)">
+        <input name="username" onchange="onchangeInputUsername(event)" placeholder="username" />
+    <br />
+    <input name="password" onchange="onchangeInputPassword(event)" placeholder="password" type="password" />
+    <br />
+    <!-- onmouseover="showOnMouseOverAlert()" -->
+    <!-- onclick="showAlert()" -->
+    <button>Click Here</button>
+    </form>
+</body>
+
+</meta>

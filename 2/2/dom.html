@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            transition-duration: 500ms;
+        }
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+            transition-duration: 500ms;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        var submitForm = function (event) {
+            event.preventDefault()
+            var username = document.getElementsByName('username')[0].value
+            var password = document.getElementsByName('password')[0].value
+            console.log('username' , username)
+            console.log('password' , password)
+            document.getElementById('descriptionP').innerHTML = 'Submitted'
+            // document.getElementById('descriptionP').innerHTML = '<h1>Submitted</h1>'
+            document.getElementById('descriptionP').style.color ="green"
+            document.getElementById('descriptionP').style.fontSize ="30px"
+            document.getElementById('descriptionP').style.border ="1px solid green"
+        }
+    </script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Javascript Course</h1>
+    <p id="descriptionP">
+        Officia nulla ad proident aute aliquip.
+    </p>
+    <form onsubmit="submitForm(event)">
+        <input class="myInput" name="username" id="username" placeholder="username" />
+        <br />
+        <input class="myInput" name="password" id="password" placeholder="password" type="password" />
+        <br />
+        <button>Click Here</button>
+    </form>
+</body>
+
+</meta>
+</html>

@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Node Module</title>
+    <title>Node Module(Date Fns)</title>
     <style>
         body {
             display: flex;
@@ -30,28 +31,9 @@
             color: aliceblue;
         }
     </style>
-    <script>
-        var submitForm = function (event) {
-            if(event) event.preventDefault()
-            if(document.getElementsByName('username')[0] && 
-            document.getElementsByName('password')[0]
-            ){
-                var username = document.getElementsByName('username')[0].value
-                var password = document.getElementsByName('password')[0].value
-                console.log('username' , username)
-                console.log('password' , password)
-                document.getElementById('descriptionP').innerHTML = 'Submitted'
-                document.getElementById('descriptionP').style.color ="green"
-                document.getElementById('descriptionP').style.fontSize ="30px"
-                document.getElementById('descriptionP').style.border ="1px solid green"
-            } else{
-                document.getElementById('descriptionP').innerHTML = 'Error'
-            }
-        }
-        var onBirthdayChange = function (event) {
-            console.log('birthday:' , new Date(event.target.value))
-        }
+    <script src="script.js " >
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js"></script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">

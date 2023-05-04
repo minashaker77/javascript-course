@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Math Library</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            transition-duration: 500ms;
+        }
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+            transition-duration: 500ms;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        var submitForm = function (event) {
+            if(event) event.preventDefault()
+            if(document.getElementsByName('username')[0] && 
+            document.getElementsByName('password')[0]
+            ){
+                var username = document.getElementsByName('username')[0].value
+            var password = document.getElementsByName('password')[0].value
+            console.log('username' , username)
+            console.log('password' , password)
+            document.getElementById('descriptionP').innerHTML = 'Submitted'
+            // document.getElementById('descriptionP').innerHTML = '<h1>Submitted</h1>'
+            document.getElementById('descriptionP').style.color ="green"
+            document.getElementById('descriptionP').style.fontSize ="30px"
+            document.getElementById('descriptionP').style.border ="1px solid green"
+            } else{
+                document.getElementById('descriptionP').innerHTML = 'Error'
+            }
+            // Math.random()
+            // 0.9802421891957265
+            // Math.floor(Math.random())
+            // 0
+            // Math.floor(Math.random() *10)
+            // 8
+            // var a = 10.42
+            // undefined
+            // Math.floor(a)
+            // 10
+            // math.ceil(a)
+            // Math.ceil(a)
+            // Math.round(a)
+            // Math.round()*100
+            // delete float point:
+            // Math.trunc(Math.round()*100)
+            // alamate adad ro mige:
+            // Math.sign(a * 1 or -1)
+            // 2**2 ==> Math.pow(2,2)
+            // radical ==> Math.sqrt(64)
+            // logaritm ==> Math.log(1024)
+            // Ghadre motlagh ==> Math.abs(-100) ==> 100
+            // min chand adad ==> Math.min(100,132,948,747,598,344,878)
+            // max chand adad ==> Math.max(100,132,948,747,598,344,878)
+            // (2.3 + 3.4).toFixed(2) ==> 5.70
+
+            // var a ="2"
+            // a + 2 ==> parseInt(a) + 2 ==> 4
+            // a + 2 ==> Number(a) + 2 ==> 4
+        }
+    </script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Javascript Course</h1>
+    <p id="descriptionP">
+        Officia nulla ad proident aute aliquip.
+    </p>
+    <form onsubmit="submitForm(event)">
+        <input class="myInput" name="username" id="username" placeholder="username" />
+        <br />
+        <input class="myInput" name="password" id="password" placeholder="password" type="password" />
+        <br />
+        <button>Click Here</button>
+    </form>
+</body>
+
+</meta>
+</html>

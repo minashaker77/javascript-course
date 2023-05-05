@@ -3,13 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Counter</title>
+        <title>Cookies</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+        <script type="text/Javascript" src="script.js"></script>
     </head>
-    <body>
+    <body onload="onLoadCounter()">
         <h1>Javascript Counter</h1>
         <p id="description">
             This project is written with Javascript
@@ -23,6 +24,9 @@
             </button>
             <button disabled onclick="pause()" type="button" class="pause" >
                 Pause
+            </button>
+            <button disabled onclick="reset()" type="button" class="reset" >
+                Reset
             </button>
         </div>
     </body>

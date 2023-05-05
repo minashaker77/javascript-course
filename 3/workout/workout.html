@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Countdown Timer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+        <script type="text/Javascript" src="script.js"></script>
+    </head>
+    <body onload="onLoadCounter()">
+        <h1>Javascript Counter</h1>
+        <p id="description">
+            This project is written with Javascript
+        </p>
+        <div id="timer">
+            2:00
+        </div>
+        <div id="buttons">
+            <button onclick="start()" type="button" class="start" >
+                Start
+            </button>
+            <button disabled onclick="pause()" type="button" class="pause" >
+                Pause
+            </button>
+            <button disabled onclick="reset()" type="button" class="reset" >
+                Reset
+            </button>
+        </div>
+    </body>
+</html>

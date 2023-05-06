@@ -1,10 +1,16 @@
 
 var testArray = [1,2,3,4,577,67,'a','v']
 
-var push = function(testArray){
-    return testArray + 'Mina'
+var push = function(testArray , newElement){
+    var temp = testArray;
+    temp.length = testArray.length + 1;
+    temp[temp.length-1] = newElement;
+    testArray = temp;
 }
 
 var pull = function(testArray){
-    return console.log(testArray) & testArray.length -1
+    var temp = testArray;
+    temp.length = testArray.length - 1;
+    testArray = temp;
+
 }

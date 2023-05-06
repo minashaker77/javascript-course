@@ -37,7 +37,7 @@ const sentence3 = `
         This is a Javascript course`
 
 const setName =(anotherName2)=>{
-    console.log('name', anotherName2)
+        console.log('name', anotherName2)
 }
 
 // setName('mina')

@@ -30,27 +30,13 @@ a = {
 // immutability: update object not change it
 Object.assign(a,f)
 // {name: 'mina', surname: 'shaker', age: 24, location: 'tehran', country: 'Iran', …}
-// age
-// : 
-// 24
-// country
-// : 
-// "Iran"
-// job
-// : 
-// "junior frontend developer"
-// location
-// : 
-// "tehran"
-// name
-// : 
-// "mina"
-// surname
-// : 
-// "shaker"
-// [[Prototype]]
-// : 
-// Object
+// age: 24
+// country: "Iran"
+// job: "junior frontend developer"
+// location: "tehran"
+// name: "mina"
+// surname: "shaker"
+// [[Prototype]]: Object
 
 a.teacher = true;
 // true

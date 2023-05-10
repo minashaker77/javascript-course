@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "calculator with javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minashaker77/javascript-course.git"
+  },
+  "author": "mina shaker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minashaker77/javascript-course/issues"
+  },
+  "homepage": "https://github.com/minashaker77/javascript-course#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "webpack-cli": "^5.1.1"
+  }
+}

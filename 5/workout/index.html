@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Memory Card</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./memory-card.js"></script>
+    </head>
+    <body>
+        <div class="card">
+            <div class="title">
+                <input onchange="onChangeTitle()"></input>
+            </div>
+            <div class="desc" type="text">
+                <textarea onchange="onChangeDesc()"></textarea>
+            </div>
+            <div class="myButtons">
+                <button class="add">Add</button>
+                <button class="clear">Clear</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+    </body>
+</html>

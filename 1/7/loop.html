@@ -27,8 +27,8 @@
             for(var i=0; i < names.length; i++){
                 console.log('name is:', names[i])
             }
-            names.forEach(function(names){
-                console.log('name is:', names)
+            names.forEach(function(name){
+                console.log('name is:', name)
             })
             names.forEach(function(name , index){
                 console.log('name is:', name , index)
@@ -36,13 +36,14 @@
             names.forEach(function(param1 , indexVariable){
                 console.log('name is:', param1 , indexVariable)
             })
-            names.map(function(name , index){
+            names.map(function(name){
                 return name + ' Gazer'
             })
-            var namesAndSurname = names.map(function(name , index){
+            
+            var namesAndSurname = names.map(function(name){
                 return name + ' Gazer'
             })
-            // for in
+            // for in :
             for(name in names){
                 console.log('name', name)
             }

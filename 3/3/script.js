@@ -28,7 +28,6 @@ var start = function(){
 }
 var pause = function(){
     Cookies.set('state','paused')
-
     clearInterval(countInterval)
     document.getElementsByClassName('start')[0].disabled = false;
     document.getElementsByClassName('pause')[0].disabled = true;

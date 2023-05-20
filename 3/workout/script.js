@@ -4,21 +4,24 @@ var timer = 300;
 
 var onLoadCounter = function () {
     timer = Number(Cookies.get('timer'))
-    document.getElementById('timer').innerHTML =convertSeconds(timer);
+    document.getElementById('timer').innerHTML = convertSeconds(timer);
     var previousState = Cookies.get('state')
-    if(previousState === 'started'){
+    if (previousState === 'started') {
         start()
-    } else if(previousState === 'pauesed') pause()
+    } else if (previousState === 'paused') {
+        document.getElementsByClassName('reset')[0].disabled = false;
+        pause()
+    }
 }
 
 function convertSeconds(timer) {
     var min = Math.floor(timer / 60);
     var sec = timer - min * 60;
     if (min < 10) {
-        min = "0"+min;
+        min = "0" + min;
     }
     if (sec < 10) {
-        sec = "0"+sec;
+        sec = "0" + sec;
     }
     return min + ":" + sec;
 }
@@ -30,19 +33,20 @@ var start = function () {
     timerInterval = setInterval(function () {
         document.getElementById("timer").innerHTML = convertSeconds(timer);
         Cookies.set('timer', timer)
-        Cookies.set('state','started')
+        Cookies.set('state', 'started')
         timer--
-        if(timer < 0) pause()
-        
-    }, 200);
+        if (timer < 0) pause()
+
+    }, 1000);
 
 }
 var pause = function () {
-    Cookies.set('state','paused')
+    Cookies.set('state', 'paused')
 
     clearInterval(timerInterval)
     document.getElementsByClassName('start')[0].disabled = false;
     document.getElementsByClassName('pause')[0].disabled = true;
+    document.getElementsByClassName('reset')[0].disabled = false;
 
 }
 var reset = function () {

@@ -1,8 +1,9 @@
 const API_KEY = 'efwslkj';
 const CONFIG = {
     color: 'red',
-    bckgound: 'white'
+    background: 'white'
 }
 // can't redeclare:
 // const CONFIG.color = 'orange';
-CONFIG.bckgound = 'black'
+//CONFIG ==> color: 'orange'
+CONFIG.background = 'black'

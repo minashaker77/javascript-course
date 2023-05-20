@@ -1,9 +1,9 @@
-name = 'mina';
-// this.name ==> 'mina'
+myName = 'mina';
+// this.myName ==> 'mina'
 const me = {
-    name: 'ehsan',
+    myName: 'ehsan',
     getNameWithNormalFunction: function(){
-        console.log('name', this.name);
+        console.log('name', this.myName);
     }
 }
 
@@ -11,24 +11,33 @@ const me = {
 
 
 const me2 = {
-    name: 'ehsan',
+    myName: 'ehsan',
     getNameWithNormalFunction: function(){
-        console.log('name', this.name);
+        console.log('name', this.myName);
     },
     getNameWithArrowFunction: ()=>{
-        console.log('name', this.name);
+        console.log('name', this.myName);
     }
 }
 // me2.getNameWithArrowFunction() ==> 'mina'
 
 const me3 = {
-    name: 'ehsan',
+    myName: 'ehsan',
     getNameWithNormalFunction: function(){
-        console.log('name', this.name);
+        console.log('name', this.myName);
     }.bind(this),
 }
 
 // me2.getNameWithNormalFunction() ==> name ehsan
+
+myName2: 'ehsan';
+const me4 = {
+    getNameWithArrowFunction: ()=>{
+        console.log('name', this.myName2);
+    }
+}
+// me4.getNameWithArrowFunction() ==> name ehsan
+
 ///////////////////////////////////////////////
 
 const sum = (a,b) =>{

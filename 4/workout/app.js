@@ -4,7 +4,8 @@ const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
 let userChoice
 let computerChoice
-let result
+let yourScore = 0;
+let pcScore = 0;
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id
@@ -30,25 +31,26 @@ function generateComputerChoice() {
 
 function getResult() {
     if (computerChoice === userChoice) {
-        result = 'its a draw!'
+        yourScore;
+        pcScore;
     }
     if (computerChoice === 'rock' && userChoice === "paper") {
-        result = 'you win!'
+        yourScore++
     }
     if (computerChoice === 'rock' && userChoice === "scissors") {
-        result = 'you lost!'
+        pcScore++
     }
     if (computerChoice === 'paper' && userChoice === "scissors") {
-        result = 'you win!'
+        yourScore++
     }
     if (computerChoice === 'paper' && userChoice === "rock") {
-        result = 'you lose!'
+        pcScore++
     }
     if (computerChoice === 'scissors' && userChoice === "rock") {
-        result = 'you win!'
+        yourScore++
     }
     if (computerChoice === 'scissors' && userChoice === "paper") {
-        result = 'you lose!'
+        pcScore++
     }
-    resultDisplay.innerHTML = result
+    resultDisplay.innerHTML = "<br /> Your Score: " + yourScore + "<br />PC Score :" + pcScore
 }

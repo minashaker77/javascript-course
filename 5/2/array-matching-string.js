@@ -1,60 +1,63 @@
-const name = 'mina';
-// const person ={
-//     age: 24,
-//     name: name,
-// }
-const person = {
+const myName = 'mina';
+const person ={
         age: 24,
-        name,
+        myName: myName,
 }
-//==> {age: 24, name: 'mina'}
-// const person1 = {
-//     age: 24,
-//     name,
-//     education_1:'bachelor',
-// }
-person1['education-1'] = 'bachelor'
+const person4 = {
+        age: 24,
+        myName,
+}
+//both:==> {age: 24, myName: 'mina'}
 
-// ==> {age: 24, name: 'mina', education_1: 'bachelor', education-1: 'bachelor'}
+
+const person1 = {
+        age: 24,
+        myName,
+        education_1:'bachelor',
+}
+person1['education-1'] = 'bachelor'
+// person1 ==> {age: 24, myName: 'mina', education_1: 'bachelor', education-1: 'bachelor'}
+
 const person2 = {
         age: 24,
-        name,
+        myName,
         ['education-1']: 'bachelor'
 }
-//{age: 24, name: 'mina', education-1: 'bachelor'}
+//person2: ==> {age: 24, myName: 'mina', education-1: 'bachelor'}
+
 const number = 10;
 const person3 = {
         age: 24,
-        name,
+        myName,
         ['education-1']: 'bachelor',
         [`education-${number}`]: 'bachelor'
 }
-// ==> {age: 24, name: 'mina', education-1: 'bachelor', education-10: 'bachelor'}
+//person3 ==> {age: 24, myName: 'mina', education-1: 'bachelor', education-10: 'bachelor'}
 
 const school = {
-        name: 'Hafez',
+        myName: 'Hafez',
         getName: function () {
-                return this.name
+                return this.myName
         }
 }
-// school.name
-// 'Hafez
+// school.myName
+// 'Hafez'
 
 const school1 = {
-        name: 'Hafez',
+        myName: 'Hafez',
         getName() {
-                return this.name
+                return this.myName
         }
 }
-// school.getName();
-// 'Hafez
+// school1.getName();
+// 'Hafez'
 const school2 = {
-        name: 'Hafez',
+        myName: 'Hafez',
         getName() {
-                return this.name
+                return this.myName
         },
-        setName(name) {
-                this.name = name
+        setName(myName) {
+                this.myName = myName
         }
 }
 
@@ -65,5 +68,5 @@ school2.setName('Emja')
 // school2.getName()
 // 'Emja'
 
-// school2.name
+// school2.myName
 // 'Emja'

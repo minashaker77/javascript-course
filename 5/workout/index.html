@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Memory Card</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <script src="./memory-card.js"></script>
-    </head>
-    <body>
-        <div class="card">
-            <div class="title">
-                <input onchange="onChangeTitle()"></input>
-            </div>
-            <div class="desc" type="text">
-                <textarea onchange="onChangeDesc()"></textarea>
-            </div>
-            <div class="myButtons">
-                <button class="add">Add</button>
-                <button class="clear">Clear</button>
-                <button class="cancel">Cancel</button>
-            </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Memory Card</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+
+<body>
+    <div class="card">
+        <div class="title">
+            <span>Title</span>
+            <br />
+            <input class="title_class" type="text" name="title" id="titleID"></input>
         </div>
-    </body>
+        <div class="desc">
+            <span>Description</span>
+            <br />
+            <textarea class="desc_class" type="text" name="desc" id="descID"></textarea>
+        </div>
+        <div class="myButtons">
+            <button class="add" type="add_card" onclick="onClickAdd(event)">Add</button>
+            <button class="clear">Clear</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+    <script src="./memory_card.js"></script>
+</body>
+
 </html>

@@ -4,8 +4,9 @@ body {
     justify-content: start;
     align-items: start;
 }
+
 .card {
-    width:50vw;
+    width: 50vw;
     height: fit-content;
     border-radius: 30px;
     background: #e0e0e0;
@@ -13,7 +14,8 @@ body {
     box-shadow: 15px 15px 30px #bebebe,
         -15px -15px 30px #ffffff;
 }
-.card .title input{
+
+.card .title input {
     width: 95%;
     margin-bottom: 10px;
     padding: 10px;
@@ -24,7 +26,8 @@ body {
     max-lines: 1;
     max-inline-size: 95%;
 }
-.card .desc textarea{
+
+.card .desc textarea {
     width: 95%;
     height: 100px;
     margin-bottom: 10px;
@@ -34,13 +37,20 @@ body {
     outline: none;
     resize: none;
 }
-.card .myButtons{
+
+.card span {
+    margin-left: 10px;
+    color: rgb(184, 178, 170);
+}
+
+.card .myButtons {
     align-items: center;
     justify-content: space-around;
     display: flex;
     flex-direction: row;
 }
-.card .myButtons button{
+
+.card .myButtons button {
     height: 100%;
     width: 100%;
     padding: 10px;
@@ -51,15 +61,18 @@ body {
     background-color: rgb(184, 178, 170);
     color: #fff;
 }
-.card .myButtons .add:hover{
+
+.card .myButtons .add:hover {
     background-color: green;
     color: white;
 }
-.card .myButtons .clear:hover{
+
+.card .myButtons .clear:hover {
     background-color: rgb(105, 182, 210);
     color: white;
 }
-.card .myButtons .cancel:hover{
+
+.card .myButtons .cancel:hover {
     background-color: rgb(197, 10, 10);
     color: white;
 }
